@@ -25,8 +25,12 @@ def __MAIN__():
 
     sortedResponse = getSortedDictionaryResponse(combinedData)
 
+    totalCases = 0
     for row in sortedResponse:
-        print(str(sortedResponse[row]) + " times -> " + row)
+        totalCases += sortedResponse[row]
+
+    for row in sortedResponse:
+        print(str(sortedResponse[row]) + "/" + str(totalCases) + " times -> " + row)
 
     
 def getSortedDictionaryResponse(combinedData):
